@@ -7,5 +7,5 @@ define ("DB_NAME", "shareboard");
 
 
 //define the URL's
-define ("ROOT_PATH", "/");
+define ("ROOT_PATH", "/PHPDEV/");
 define ("ROOT_URL", "http://localhost/PHPDEV/");

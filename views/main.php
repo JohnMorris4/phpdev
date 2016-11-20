@@ -5,8 +5,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/style.css">
     <title>Shareboard</title>
 </head>
 <body>
@@ -25,6 +25,11 @@
           <ul class="nav navbar-nav">
             <li class="path"><a href="<?php echo ROOT_URL; ?>">Home</a></li>
             <li class="path"><a href="<?php echo ROOT_URL; ?>Shares">Shares</a></li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="path"><a href="<?php echo ROOT_URL; ?>users/login">Login</a></li>
+            <li class="path"><a href="<?php echo ROOT_URL; ?>users/register">Register</a></li>
 
           </ul>
         </div><!--/.nav-collapse -->
