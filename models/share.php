@@ -1,7 +1,7 @@
 <?php
 class ShareModel extends Model {
     public function Index(){
-        $this->query('SELECT * FROM shares');
+        $this->query('SELECT * FROM shares ORDER BY create_date DESC');
         $rows = $this->resultSet();
         //print_r($rows);
         return $rows;
@@ -11,6 +11,10 @@ class ShareModel extends Model {
        //sanatize the post array
         $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if($post['submit']){
+            if($post['title'] == '' || $post['body'] == '' || $post['link'] == ''){
+				Messages::setMsg('Please Fill In All Fields', 'error');
+				return;
+			}
            //add post
             $this->query('INSERT INTO shares (title, body, link, user_id) VALUES (:title, :body, :link, :user_id)');
             $this->bind(':title', $post['title']);

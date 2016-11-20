@@ -10,7 +10,7 @@
         </div>
         <div class="form-group">
             <label for="">Body</label>
-            <textarea type="text" name="title" class="form-control"></textarea>
+            <textarea type="text" name="body" class="form-control"></textarea>
         </div>
         <div class="form-group">
             <label for="">Link</label>
